@@ -20,12 +20,6 @@
                 <a href="#hello" class="header__logo-text">Valeria.K</a>
             </div>
 
-            <div class="header__burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
             <nav class="header__menu menu">
                 <ul class="menu__list">
                     <li class="menu__item menu__item--active"><a href="#hello" class="menu__link">ГЛАВНАЯ</a></li>
@@ -181,34 +175,6 @@
         <p class="footer__title">Frontend-specialist</p>
         <p class="footer__bottom-text">Работа выполнена в 2025 г. Коломыцевой Валерией</p>
     </footer>
-
-    <script>
-        const burger = document.querySelector('.header__burger');
-        const menu = document.querySelector('.menu__list');
-
-        burger.addEventListener('click', () => {
-            burger.classList.toggle('active');
-            menu.classList.toggle('active');
-            document.body.classList.toggle('lock');
-        });
-
-        const menuLinks = document.querySelectorAll('.menu__link');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                burger.classList.remove('active');
-                menu.classList.remove('active');
-                document.body.classList.remove('lock');
-            });
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.header__container') && menu.classList.contains('active')) {
-                burger.classList.remove('active');
-                menu.classList.remove('active');
-                document.body.classList.remove('lock');
-            }
-        });
-    </script>
 
 </body>
 
